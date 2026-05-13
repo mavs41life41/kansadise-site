@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kansadise</title>
+  <title>Kansadise | KCMO</title>
 
   <style>
     :root {
       --cream: #f4efe4;
+      --cream-dark: #efe6d5;
       --green: #1f3b2d;
       --gold: #9a7130;
+      --text: #24382d;
     }
 
     * {
@@ -20,15 +22,15 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to bottom, #f7f2e8, #efe6d5);
-      color: #111;
+      background: linear-gradient(to bottom, var(--cream), var(--cream-dark));
+      color: var(--text);
       min-height: 100vh;
     }
 
     .container {
       max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px 60px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
       text-align: center;
     }
 
@@ -36,16 +38,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 0.85rem;
+      color: var(--green);
+      letter-spacing: 2px;
+      text-transform: uppercase;
       margin-bottom: 30px;
-      letter-spacing: 1px;
+      opacity: 0.85;
     }
 
     .logo {
-      width: 320px;
-      max-width: 85%;
-      margin: 20px auto 10px;
+      width: 340px;
+      max-width: 88%;
+      margin: 10px auto 18px;
       display: block;
     }
 
@@ -53,62 +57,102 @@
       display: inline-block;
       background: var(--green);
       color: white;
-      padding: 10px 18px;
+      padding: 10px 20px;
       border-radius: 999px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       letter-spacing: 2px;
-      margin-top: 10px;
-      margin-bottom: 30px;
+      margin: 10px 0 30px;
+      text-transform: uppercase;
+      font-weight: bold;
     }
 
     h1 {
       font-size: 5rem;
       letter-spacing: 8px;
       color: var(--green);
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      line-height: 1;
     }
 
     .tagline {
-      font-size: 1.7rem;
-      color: #333;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.5;
-      margin-bottom: 35px;
-      font-weight: 600;
-    }
-
-    .description {
-      max-width: 760px;
-      margin: auto;
-      font-size: 1.15rem;
-      line-height: 2;
-      color: #444;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--green);
+      max-width: 850px;
+      margin: 0 auto 28px;
+      line-height: 1.35;
     }
 
     .divider {
-      width: 120px;
+      width: 130px;
       height: 3px;
       background: var(--gold);
-      margin: 40px auto;
+      margin: 35px auto;
       border-radius: 999px;
+    }
+
+    .description {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1.18rem;
+      line-height: 2;
+      color: var(--text);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 55px auto 0;
+      max-width: 900px;
+    }
+
+    .card {
+      border: 1px solid rgba(31, 59, 45, 0.2);
+      border-radius: 18px;
+      padding: 24px 18px;
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .card h2 {
+      color: var(--green);
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text);
     }
 
     .footer {
       margin-top: 70px;
-      color: #666;
+      color: var(--green);
       font-size: 0.9rem;
       letter-spacing: 1px;
+      opacity: 0.75;
     }
 
     @media (max-width: 700px) {
+      .container {
+        padding: 28px 18px 45px;
+      }
 
       .top {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+      }
+
+      .logo {
+        width: 285px;
       }
 
       h1 {
-        font-size: 4rem;
+        font-size: 3.4rem;
+        letter-spacing: 5px;
       }
 
       .tagline {
@@ -120,8 +164,9 @@
         line-height: 1.8;
       }
 
-      .logo {
-        width: 260px;
+      .cards {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
       }
     }
   </style>
@@ -129,40 +174,55 @@
 
 <body>
 
-  <div class="container">
+  <main class="container">
 
-    <div class="top">
+    <header class="top">
       <div>Kansadise KCMO</div>
       <div>Est. 2026</div>
-    </div>
+    </header>
 
     <img
       class="logo"
       src="E57AE685-5E51-4F84-9C20-D0B64B9061FF.png"
       alt="Kansadise Logo"
-    >
+    />
 
-    <div class="badge">
-      COMING SOON
-    </div>
+    <div class="badge">Coming Soon</div>
 
     <h1>KANSADISE</h1>
 
-    <div class="tagline">
+    <section class="tagline">
       Midwest hustle. Earned success. Timeless design.
-    </div>
+    </section>
 
     <div class="divider"></div>
 
-    <div class="description">
+    <section class="description">
       Kansadise is a Kansas City-inspired lifestyle brand built around Midwest hustle, earned success, timeless design, and the feeling of finding paradise wherever you stand.
-    </div>
+    </section>
 
-    <div class="footer">
+    <section class="cards">
+      <div class="card">
+        <h2>Midwest Roots</h2>
+        <p>Inspired by Kansas City grit, work ethic, and pride.</p>
+      </div>
+
+      <div class="card">
+        <h2>Earned Success</h2>
+        <p>Built for people who know paradise is created, not handed out.</p>
+      </div>
+
+      <div class="card">
+        <h2>Timeless Design</h2>
+        <p>Clean lifestyle pieces made to feel classic from day one.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
       © 2026 Kansadise KCMO
-    </div>
+    </footer>
 
-  </div>
+  </main>
 
 </body>
 </html>
